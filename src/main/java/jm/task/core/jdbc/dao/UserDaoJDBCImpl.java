@@ -30,7 +30,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void dropUsersTable() {
         try (Statement statement = connection.createStatement()) {
-            statement.executeUpdate("DROP TABLE Users");
+            statement.executeUpdate("DROP TABLE users");
             connection.commit();
         } catch (SQLException e) {
             rollback();
